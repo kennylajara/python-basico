@@ -1,7 +1,42 @@
 # CONVERSOR DE MONEDAS
-moneda_local = int( input( "¿Cuánto dinero tienes en tu moneda local? " ))
-tasa_del_dia = int( input ( "¿Cuál es la tasa del día? " ))
 
-resultado = round( moneda_local / tasa_del_dia, 2)
+menu = """
+Bienvenido al conversor de monedas
 
-print ( f'Equivale a {resultado} en la moneda a que deseas convertir')
+1 - Pesos argentinos
+2 - Pesos colombianos
+3 - Pesos dominicanos
+4 - Pesos mexicanos
+
+Elige tu moneda base:
+"""
+
+option = int(input(menu))
+
+
+if option == 1:
+    currency = "argentinos"
+    rate = 65
+    amount = int(input(f"Indique la cantidad de {currency} a convertir: "))
+    result = int( amount * rate )
+    print ( f'{amount} pesos {currency} equivalen a {result} a dólares' )
+elif option == 2:
+    currency = "colombianos"
+    rate = 3875
+    amount = int(input(f"Indique la cantidad de {currency} a convertir: "))
+    result = int( amount * rate )
+    print ( f'{amount} pesos {currency} equivalen a {result} a dólares' )
+elif option == 3:
+    currency = "dominicanos"
+    rate = 59
+    amount = int(input(f"Indique la cantidad de {currency} a convertir: "))
+    result = int( amount * rate )
+    print ( f'{amount} pesos {currency} equivalen a {result} a dólares' )
+elif option == 4:
+    currency = "mexicanos"
+    rate = 24
+    amount = int(input(f"Indique la cantidad de {currency} a convertir: "))
+    result = int( amount * rate )
+    print ( f'{amount} pesos {currency} equivalen a {result} a dólares' )
+else:
+    print ('Esta no es una opción válida')
