@@ -1,10 +1,10 @@
+# Funcion para convertir monedas
 def convert ( currency, rate ):
     amount = int(input(f"Indique la cantidad de pesos {currency} a convertir: "))
     result = round( amount / rate, 2 )
     print ( f'{amount} pesos {currency} equivalen a {result} a dólares' )
 
 # CONVERSOR DE MONEDAS
-
 menu = """
 Bienvenido al conversor de monedas
 
@@ -17,22 +17,14 @@ Elige tu moneda base: """
 
 option = int(input(menu))
 
-
+# Realizar conversion de moneda
 if option == 1:
-    currency = "argentinos"
-    rate = 65
-    convert ( currency, rate )
+    convert ( "argentinos", 65 )
 elif option == 2:
-    currency = "colombianos"
-    rate = 3875
-    convert ( currency, rate )
+    convert ( "colombianos", 3875 )
 elif option == 3:
-    currency = "dominicanos"
-    rate = 59
-    convert ( currency, rate )
+    convert ( "dominicanos", 59 )
 elif option == 4:
-    currency = "mexicanos"
-    rate = 24
-    convert ( currency, rate )
+    convert ( "mexicanos", 24 )
 else:
-    print ('Esta no es una opción válida')
+    print ('Esta no es una opción válida.')
